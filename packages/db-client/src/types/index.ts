@@ -32,6 +32,7 @@ export interface BaseOptions {
    */
   deadline?: number;
   testing?: number;
+  newfeature?: number;
 }
 
 /**
