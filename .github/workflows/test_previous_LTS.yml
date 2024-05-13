@@ -1,4 +1,4 @@
-name: "LTS"
+name: "previous LTS"
 
 on:
   pull_request:
@@ -13,7 +13,7 @@ jobs:
     name: Test
     uses: ./.github/workflows/tests.yml
     with:
-      version: "latest"
+      version: "previous-lts"
     secrets:
       eventstore_cloud_id: ${{ secrets.EVENTSTORE_CLOUD_ID }}
       tailscale_auth: ${{ secrets.TAILSCALE_AUTH }}
