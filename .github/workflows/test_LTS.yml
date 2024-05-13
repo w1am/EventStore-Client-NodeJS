@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - master
-  schedule:
-    - cron: "0 3 * * 0" # Every sunday at 3am UTC.
 
 jobs:
   test:
@@ -14,6 +12,3 @@ jobs:
     uses: ./.github/workflows/tests.yml
     with:
       version: "latest"
-    secrets:
-      eventstore_cloud_id: ${{ secrets.EVENTSTORE_CLOUD_ID }}
-      tailscale_auth: ${{ secrets.TAILSCALE_AUTH }}
