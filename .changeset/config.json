@@ -13,7 +13,8 @@
   "baseBranch": "master",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "@eventstore/test"
+    "@eventstore/test",
+    "@eventstore/opentelemetry"
   ],
   "privatePackages": false,
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
