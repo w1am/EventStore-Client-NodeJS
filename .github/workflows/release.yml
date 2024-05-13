@@ -9,13 +9,8 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  build-and-test:
-    uses: ./.github/workflows/tests.yml
-    with:
-      version: 'latest'
   release:
     runs-on: ubuntu-latest
-    needs: [build-and-test]
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
