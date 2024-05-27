@@ -1,0 +1,20 @@
+name: Changelog
+on:
+  pull_request:
+jobs:
+  updateChangelog:
+    name: Update changelog
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        repo: ["EventStore-Client-NodeJS"]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update changelog for the ${{ matrix.repo }} repo
+        uses: w1am/Automations/changelog-update@master
+        with:
+          github-token: ${{ secrets.GH_PAT }}
+          mode: batch
+          owner: w1am
+          repo: ${{ matrix.repo }}
