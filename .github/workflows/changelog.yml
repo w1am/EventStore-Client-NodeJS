@@ -1,6 +1,10 @@
 name: Changelog
 on:
   workflow_dispatch:
+    inputs:
+      pr-number:
+        description: 'Pull request number'     
+        required: true
 jobs:
   updateChangelog:
     name: Update changelog
