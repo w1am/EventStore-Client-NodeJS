@@ -184,7 +184,8 @@ export class Instrumentation extends InstrumentationBase {
               ...metadata,
               [TRACE_ID]: traceId,
               [SPAN_ID]: spanId,
-              "something": "true"
+              "something": "true",
+              "other": "true"
             };
           }
         });
