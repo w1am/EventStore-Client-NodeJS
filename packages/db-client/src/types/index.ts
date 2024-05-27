@@ -31,6 +31,7 @@ export interface BaseOptions {
    * An optional length of time (in milliseconds) to override the default deadline.
    */
   deadline?: number;
+  number?: number;
 }
 
 /**
